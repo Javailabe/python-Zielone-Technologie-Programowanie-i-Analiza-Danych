@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="156d20d3-eacb-42f6-be65-a8571d677276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/24.05 excercises.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24.05 listy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24.05 petle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/24.05 excercises.py" beforeDir="false" afterPath="$PROJECT_DIR$/24.05 excercises.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/24.05 slownik_obiekt.py" beforeDir="false" afterPath="$PROJECT_DIR$/24.05 slownik_obiekt.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +50,7 @@
     "Python.20.05 excercises.executor": "Run",
     "Python.24.05 excercises.executor": "Run",
     "Python.24.05 listy.executor": "Run",
+    "Python.24.05 slownik_obiekt.executor": "Run",
     "Python.24.05 typy zlozone.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
