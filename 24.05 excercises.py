@@ -112,6 +112,7 @@ miasto = {
 keys = miasto.keys()
 values = miasto.values()
 
+from datetime import  date
 
 # 3. Utwórz tablicę z 3 obiektami symbolizującymi Loty i 4. W każdym locie dodaj klucze: samolot, kierunek, cena, pasażerowie
 loty = [
@@ -119,20 +120,76 @@ loty = [
         "samolot": "Airbus",
         "cena": 123,
         "kierunek": "Warsaw",
-        "pasazerowie": 100
+        "pasazerowie": 100,
+        "liczba_miejsc":100
     },
     {
         "samolot": "Cesna",
         "cena": 456,
         "kierunek": "London Stansted",
-        "pasazerowie": 85
+        "pasazerowie": 85,
+        "liczba_miejsc": 120
     },
     {
-        "samolot": "AirTrain",
+        "samolot": "Airbus",
         "cena": 135,
-        "kierunek": "Rome Fiumicino",
-        "pasazerowie": 120
+        "kierunek": "Rome",
+        "pasazerowie": 120,
+        "liczba_miejsc": 150
     }
 ]
+today = date.today()
+# ta petla dodaje dodatkowe pole w slowniku
+for lot in loty:
+    lot["data_odlotu"] = str(today)
+    lot["dostepne_miejsca"] = lot["liczba_miejsc"] > lot["pasazerowie"]
 
-print(loty)
+samoloty = [lot["samolot"] for lot in loty]
+tanie_loty = [lot for lot in loty if lot["cena"] < 400]
+lot_do_rome = [lot for lot in loty if lot["kierunek"] == "Rome"]
+
+miejsca = [lot['liczba_miejsc'] for lot in loty]
+suma_miejsc = sum(miejsca)
+# print(suma_miejsc)
+
+# 1. Oblicz ilość wszystkich pasażerów latających naszymi liniami
+ile_pasazerow = [lot['pasazerowie'] for lot in loty]
+suma_pasazerow = sum(ile_pasazerow)
+
+# 2. Utwórz tablicę zawierającą tylko nazwy kierunków lotów
+kierunki = [lot['kierunek'] for lot in loty]
+
+
+# 3. Oblicz ile w sumie zarobiły nasze linie lotnicze (zlicz pasażerów i ceny lotów)
+zarobek = [(lot["pasazerowie"] * lot["cena"]) for lot in loty]
+total = sum(zarobek)
+# print(total)
+
+# 5. Wypisz te loty, w których zostały wolne miejsca
+wolne_miejsca = [lot for lot in loty if lot["pasazerowie"] < lot["liczba_miejsc"]]
+# print(wolne_miejsca)
+
+# from collections import Counter
+#
+# samoloty = Counter([lot['samolot'] for lot in loty])
+# dict_samoloty = dict(samoloty)
+# print(dict_samoloty)
+#
+# for klucz, wartosc in samoloty.items():
+#     print(f"Model {klucz}, ilość {wartosc}")
+#
+#  samoloty = Counter([lot["samolot"] for lot in loty])
+# slownik_samolotow = dict(samoloty)
+#
+# for klucz, wartosc in slownik_samolotow.items():
+#     print(f"Model {klucz}, ilość {wartosc} sztuk")
+#
+# slownik = {}
+# for model in samoloty:
+#     if model in slownik:
+#         slownik[model] += 1
+#     else:
+#         slownik[model] = 1
+#
+# print(slownik)
+
