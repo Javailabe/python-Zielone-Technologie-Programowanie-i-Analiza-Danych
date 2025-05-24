@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="156d20d3-eacb-42f6-be65-a8571d677276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/python-Zielone Technologie - Programowanie i Analiza Danych.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10.05 floats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10.05 homework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10.05 introduction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20.05 excercises.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20.05 if-else.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/24.05 excercises.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/24.05 listy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/24.05 petle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,21 +25,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Javailabe"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Javailabe&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Javailabe/python-Zielone-Technologie-Programowanie-i-Analiza-Danych.git",
-    "accountId": "69a10f51-45b0-4f0f-86c9-8c8a35947018"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Javailabe/python-Zielone-Technologie-Programowanie-i-Analiza-Danych.git&quot;,
+    &quot;accountId&quot;: &quot;69a10f51-45b0-4f0f-86c9-8c8a35947018&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2xMxCzCmRIRUVtAkecCk10hjoed" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,9 +49,13 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.20.05 excercises.executor": "Run",
+    "Python.24.05 excercises.executor": "Run",
+    "Python.24.05 listy.executor": "Run",
+    "Python.24.05 typy zlozone.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/kulec/PycharmProjects/python-Zielone Technologie - Programowanie i Analiza Danych"
   }
 }]]></component>
   <component name="SharedIndexes">
