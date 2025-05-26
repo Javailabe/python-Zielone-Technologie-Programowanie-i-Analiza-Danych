@@ -167,3 +167,243 @@ for item in dane:
     else:
         zgrupowane[pierwsza_litera] = [item]
 print(f'Zad 21: {zgrupowane}')
+# ---------------------------------------------
+
+zadania = [
+    {
+        "nazwa": "Zad 1",
+        "opis": "Oblicza sumę wszystkich liczb w podanej liście.",
+        "dane": [1, 2, 3, 4, 5],
+        "oczekiwany_wynik": 15
+    },
+    {
+        "nazwa": "Zad 2",
+        "opis": "Znajduje największą liczbę w podanej liście.",
+        "dane": [15, 3, 10, 4, 22],
+        "oczekiwany_wynik": 22
+    },
+    {
+        "nazwa": "Zad 3",
+        "opis": "Usuwa wszystkie wystąpienia określonej liczby z listy.",
+        "dane": [2, 5, 3, 5, 7, 5],
+        "usuwana_liczba": 5,
+        "oczekiwany_wynik": [2, 3, 7]
+    },
+    {
+        "nazwa": "Zad 4",
+        "opis": "Zwraca nową listę, w której wszystkie elementy są pomnożone przez 2.",
+        "dane": [1, 2, 3, 4, 5],
+        "oczekiwany_wynik": [2, 4, 6, 8, 10]
+    },
+    {
+        "nazwa": "Zad 5",
+        "opis": "Sprawdza, czy lista zawiera określoną liczbę.",
+        "dane": [3, 7, 12, 9, 20],
+        "szukana_liczba": 9,
+        "oczekiwany_wynik": True
+    },
+    {
+        "nazwa": "Zad 6",
+        "opis": "Zwraca listę posortowaną rosnąco.",
+        "dane": [5, 2, 9, 1, 6, 7],
+        "oczekiwany_wynik": [1, 2, 5, 6, 7, 9]
+    },
+    {
+        "nazwa": "Zad 7",
+        "opis": "Zwraca listę posortowaną malejąco.",
+        "dane": [1, 3, 8, 4, 7],
+        "oczekiwany_wynik": [8, 7, 4, 3, 1]
+    },
+    {
+        "nazwa": "Zad 8",
+        "opis": "Zwraca tylko unikalne elementy z listy (usuń duplikaty).",
+        "dane": [1, 2, 3, 2, 4, 1, 5],
+        "oczekiwany_wynik": [1, 2, 3, 4, 5]
+    },
+    {
+        "nazwa": "Zad 9",
+        "opis": "Zwraca liczbę wystąpień określonego elementu w liście.",
+        "dane": [10, 20, 20, 30, 20, 40],
+        "szukana_liczba": 20,
+        "oczekiwany_wynik": 3
+    },
+    {
+        "nazwa": "Zad 10",
+        "opis": "Zwraca wszystkie liczby większe niż 10.",
+        "dane": [5, 15, 10, 25, 8, 12],
+        "oczekiwany_wynik": [15, 25, 12]
+    },
+    {
+        "nazwa": "Zad 11",
+        "opis": "Zwraca elementy na parzystych indeksach.",
+        "dane": [10, 20, 30, 40, 50, 60],
+        "oczekiwany_wynik": [10, 30, 50]
+    },
+    {
+        "nazwa": "Zad 12",
+        "opis": "Oblicza średnią z elementów listy.",
+        "dane": [3, 5, 7, 9, 2],
+        "oczekiwany_wynik": 5.2
+    },
+    {
+        "nazwa": "Zad 13",
+        "opis": "Odwraca kolejność elementów w liście.",
+        "dane": [1, 2, 3, 4, 5],
+        "oczekiwany_wynik": [5, 4, 3, 2, 1]
+    },
+    {
+        "nazwa": "Zad 14",
+        "opis": "Zwiększa każdy element w liście o 3.",
+        "dane": [1, 2, 3, 4, 5],
+        "oczekiwany_wynik": [4, 5, 6, 7, 8]
+    },
+    {
+        "nazwa": "Zad 15",
+        "opis": "Wstawia element w określoną pozycję w liście.",
+        "dane": [1, 2, 3, 4, 5],
+        "pozycja": 2,
+        "element_do_wstawienia": 99,
+        "oczekiwany_wynik": [1, 99, 2, 3, 4, 5]
+    },
+    {
+        "nazwa": "Zad 16",
+        "opis": "Usuwa element na określonym indeksie.",
+        "dane": [10, 20, 30, 40, 50],
+        "indeks_do_usuniecia": 3,
+        "oczekiwany_wynik": [10, 20, 30, 50]
+    },
+    {
+        "nazwa": "Zad 17",
+        "opis": "Zwraca listę tylko z liczbami parzystymi.",
+        "dane": [1, 2, 3, 4, 5, 6],
+        "oczekiwany_wynik": [2, 4, 6]
+    },
+    {
+        "nazwa": "Zad 18",
+        "opis": "Łączy dwie listy w jedną.",
+        "dane1": [1, 2, 3],
+        "dane2": [4, 5, 6],
+        "oczekiwany_wynik": [1, 2, 3, 4, 5, 6]
+    },
+    {
+        "nazwa": "Zad 19",
+        "opis": "Zrób z listy słownik, gdzie klucze to elementy, a wartości to ich liczba wystąpień.",
+        "dane": [1, 2, 2, 3, 3, 3, 4],
+        "oczekiwany_wynik": {1: 1, 2: 2, 3: 3, 4: 1}
+    },
+    {
+        "nazwa": "Zad 20",
+        "opis": "Zrób nową listę, zawierającą tylko te liczby, które są większe od średniej.",
+        "dane": [5, 12, 7, 9, 3, 8],
+        "oczekiwany_wynik": [12, 9, 8]
+    },
+    {
+        "nazwa": "Zad 21",
+        "opis": "Utwórz słownik, gdzie klucze to pierwsze litery słów, a wartości to listy słów zaczynających się od tej litery.",
+        "dane": ["apple", "banana", "apricot", "cherry", "blueberry", "avocado"],
+        "oczekiwany_wynik": {'a': ['apple', 'apricot', 'avocado'], 'b': ['banana', 'blueberry'], 'c': ['cherry']}
+    }
+]
+
+def operacja_1(dane):
+    return sum(dane)
+
+def operacja_2(dane):
+    return max(dane)
+
+def operacja_3(dane, usuwana_liczba):
+    return [x for x in dane if x != usuwana_liczba]
+
+def operacja_4(dane):
+    return [x * 2 for x in dane]
+
+def operacja_5(dane, szukana_liczba):
+    return szukana_liczba in dane
+
+def operacja_6(dane):
+    return sorted(dane)
+
+def operacja_7(dane):
+    return sorted(dane, reverse=True)
+
+def operacja_8(dane):
+    return list(set(dane))
+
+def operacja_9(dane, szukana_liczba):
+    return dane.count(szukana_liczba)
+
+def operacja_10(dane):
+    return [x for x in dane if x > 10]
+
+def operacja_11(dane):
+    return dane[::2]
+
+def operacja_12(dane):
+    if not dane:
+        return 0
+    return sum(dane) / len(dane)
+
+def operacja_13(dane):
+    return dane[::-1]
+
+def operacja_14(dane):
+    return [x + 3 for x in dane]
+
+def operacja_15(dane, pozycja, element_do_wstawienia):
+    nowa_lista = dane[:]
+    nowa_lista.insert(pozycja - 1, element_do_wstawienia)
+    return nowa_lista
+
+def operacja_16(dane, indeks_do_usuniecia):
+    nowa_lista = dane[:]
+    if 0 <= indeks_do_usuniecia < len(nowa_lista):
+        nowa_lista.pop(indeks_do_usuniecia)
+    return nowa_lista
+
+def operacja_17(dane):
+    return [x for x in dane if x % 2 == 0]
+
+def operacja_18(dane1, dane2):
+    return dane1.extend(dane2)
+
+def operacja_19(dane):
+    licznik = {}
+    for element in dane:
+        licznik[element] = licznik.get(element, 0) + 1
+    return licznik
+
+def operacja_20(dane):
+    srednia = sum(dane) / len(dane) if dane else 0
+    return [x for x in dane if x > srednia]
+
+def operacja_zgrupuj_po_pierwszej_literze(dane_slowa):
+    zgrupowane = {}
+    for slowo in dane_slowa:
+        pierwsza_litera = slowo[0]
+        if pierwsza_litera in zgrupowane:
+            zgrupowane[pierwsza_litera].append(slowo)
+        else:
+            zgrupowane[pierwsza_litera] = [slowo]
+    return zgrupowane
+
+print(f"Zadanie 1: Suma - {operacja_1(zadania[0]['dane'])}")
+print(f"Zadanie 2: Największy - {operacja_2(zadania[1]['dane'])}")
+print(f"Zadanie 3: Usuń '{zadania[2]['usuwana_liczba']}' - {operacja_3(zadania[2]['dane'], zadania[2]['usuwana_liczba'])}")
+print(f"Zadanie 4: Pomnożone przez 2 - {operacja_4(zadania[3]['dane'])}")
+print(f"Zadanie 5: Czy '{zadania[4]['szukana_liczba']}' jest? - {operacja_5(zadania[4]['dane'], zadania[4]['szukana_liczba'])}")
+print(f"Zadanie 6: Posortowane rosnąco - {operacja_6(zadania[5]['dane'])}")
+print(f"Zadanie 7: Posortowane malejąco - {operacja_7(zadania[6]['dane'])}")
+print(f"Zadanie 8: Unikalne elementy - {operacja_8(zadania[7]['dane'])}")
+print(f"Zadanie 9: Liczba wystąpień '{zadania[8]['szukana_liczba']}' - {operacja_9(zadania[8]['dane'], zadania[8]['szukana_liczba'])}")
+print(f"Zadanie 10: Większe niż 10 - {operacja_10(zadania[9]['dane'])}")
+print(f"Zadanie 11: Parzyste indeksy - {operacja_11(zadania[10]['dane'])}")
+print(f"Zadanie 12: Średnia - {operacja_12(zadania[11]['dane'])}")
+print(f"Zadanie 13: Odwrócona lista - {operacja_13(zadania[12]['dane'])}")
+print(f"Zadanie 14: Zwiększone o 3 - {operacja_14(zadania[13]['dane'])}")
+print(f"Zadanie 15: Wstawiono '{zadania[14]['element_do_wstawienia']}' na poz. {zadania[14]['pozycja']} - {operacja_15(zadania[14]['dane'], zadania[14]['pozycja'], zadania[14]['element_do_wstawienia'])}")
+print(f"Zadanie 16: Usunięto indeks {zadania[15]['indeks_do_usuniecia']} - {operacja_16(zadania[15]['dane'], zadania[15]['indeks_do_usuniecia'])}")
+print(f"Zadanie 17: Tylko parzyste - {operacja_17(zadania[16]['dane'])}")
+print(f"Zadanie 18: Połączone listy - {operacja_18(zadania[17]['dane1'], zadania[17]['dane2'])}")
+print(f"Zadanie 19: Liczba wystąpień elementów - {operacja_19(zadania[18]['dane'])}")
+print(f"Zadanie 20: Większe od średniej - {operacja_20(zadania[19]['dane'])}")
+print(f"Zadanie Grupowanie: {operacja_zgrupuj_po_pierwszej_literze(zadania[20]['dane'])}")
