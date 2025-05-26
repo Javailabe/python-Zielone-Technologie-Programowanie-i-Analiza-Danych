@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="156d20d3-eacb-42f6-be65-a8571d677276" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/24.04 listy_zadania.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24.05 funkcje_metody.py" beforeDir="false" afterPath="$PROJECT_DIR$/24.05 funkcje_metody.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.20.05 excercises.executor": "Run",
+    "Python.24.04 listy_zadania.executor": "Run",
     "Python.24.05 excercises.executor": "Run",
     "Python.24.05 funkcje_metody.executor": "Run",
     "Python.24.05 listy.executor": "Run",
