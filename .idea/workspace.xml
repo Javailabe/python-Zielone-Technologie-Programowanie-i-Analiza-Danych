@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="156d20d3-eacb-42f6-be65-a8571d677276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/30.05 pandas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/30.05 pandas_zadania.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amazon.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books_sample.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/30.05 dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +53,7 @@
     "Python.24.05 listy.executor": "Run",
     "Python.24.05 slownik_obiekt.executor": "Run",
     "Python.24.05 typy zlozone.executor": "Run",
+    "Python.30.05 dashboard.executor": "Run",
     "Python.30.05 pandas.executor": "Run",
     "Python.30.05 pandas_zadania.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
