@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="156d20d3-eacb-42f6-be65-a8571d677276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/30.05 dashboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03.06 API.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.03.06 API.executor": "Run",
     "Python.20.05 excercises.executor": "Run",
     "Python.24.04 listy_zadania.executor": "Run",
     "Python.24.05 excercises.executor": "Run",
