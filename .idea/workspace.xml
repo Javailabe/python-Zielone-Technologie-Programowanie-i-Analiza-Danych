@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="156d20d3-eacb-42f6-be65-a8571d677276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/0506_StreamLit_Weather.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747761619411</updated>
-      <workItem from="1749137529108" duration="652000" />
+      <workItem from="1749137529108" duration="1351000" />
     </task>
     <servers />
   </component>
