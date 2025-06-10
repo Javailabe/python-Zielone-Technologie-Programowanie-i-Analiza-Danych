@@ -59,12 +59,15 @@ def get_poke_types(pokemon):
         return None
 
 pokemons_names = pokemons_with_ids['Name']
-pokemons_with_types = {}
-for pokemon in pokemons_names:
-    types = get_poke_types(pokemon)
-    pokemons_with_types[pokemon] = types
-pokemons_with_ids['Type'] = pokemons_with_ids['Name'].map(pokemons_with_types)
+pokemons_with_ids['Type'] = pokemons_names.apply(get_poke_types)
+# pokemons_with_ids['Type'] = pokemons_with_ids['Name'].apply(get_poke_types)
+# pokemons_with_types = {}
+# for pokemon in pokemons_names:
+#     types = get_poke_types(pokemon)
+#     pokemons_with_types[pokemon] = types
+# pokemons_with_ids['Type'] = pokemons_with_ids['Name'].map(pokemons_with_types)
 pokemons_with_types = pokemons_with_ids
+# print(pokemons_with_types)
 
 # 4. Filtracja po typie
 # Wyświetl tylko te Pokémony, które mają typ "water".
@@ -74,34 +77,50 @@ water_pokemons = pokemons_with_types[pokemons_with_types['Type'].str.contains('W
 
 # 5. Statystyki ataku i obrony
 # Dla tych Pokémonów pobierz attack i defense i dodaj je jako kolumny do DataFrame.
+# def get_pokemon_stats(pokemon):
+#     stats_data = {
+#         'Attack': None,
+#         'Defense': None
+#     }
+#     url = f'https://pokeapi.co/api/v2/pokemon/{pokemon}/'
+#     response = request.get(url)
+#     if response.status_code == 200:
+#         poke_json = response.json()
+#         for stat_entry in poke_json['stats']:
+#             stat_name = stat_entry['stat']['name']
+#             base_stat = stat_entry['base_stat']
+#             if stat_name == 'attack':
+#                 stats_data['Attack'] = base_stat
+#             elif stat_name == 'defense':
+#                 stats_data['Defense'] = base_stat
+#     return stats_data
+
 def get_pokemon_stats(pokemon):
-    stats_data = {
-        'Attack': None,
-        'Defense': None
-    }
     url = f'https://pokeapi.co/api/v2/pokemon/{pokemon}/'
     response = request.get(url)
     if response.status_code == 200:
-        poke_json = response.json()
-        for stat_entry in poke_json['stats']:
-            stat_name = stat_entry['stat']['name']
-            base_stat = stat_entry['base_stat']
-            if stat_name == 'attack':
-                stats_data['Attack'] = base_stat
-            elif stat_name == 'defense':
-                stats_data['Defense'] = base_stat
-    return stats_data
+        stats = { 'Attack': None, 'Defense': None }
+        for stat_entry in response.json()['stats']:
+            name = stat_entry['stat']['name']
+            if name == 'attack':
+                stats['Attack'] = stat_entry['base_stat']
+            elif name == 'defense':
+                stats['Defense'] = stat_entry['base_stat']
+        return pd.Series(stats)
+    return pd.Series({'Attack': None, 'Defense': None})
 
-pokemon_attack_map = {}
-pokemon_defense_map = {}
-for pokemon in pokemons_names:
-    stats = get_pokemon_stats(pokemon)
-    if stats:
-        pokemon_attack_map[pokemon] = stats['Attack']
-        pokemon_defense_map[pokemon] = stats['Defense']
-pokemons_with_types['Attack'] = pokemons_with_types['Name'].map(pokemon_attack_map)
-pokemons_with_types['Defense'] = pokemons_with_types['Name'].map(pokemon_defense_map)
-# print(pokemons_with_types)
+pokemons_with_types[['Attack', 'Defense']] = pokemons_with_types['Name'].apply(get_pokemon_stats)
+
+# pokemon_attack_map = {}
+# pokemon_defense_map = {}
+# for pokemon in pokemons_names:
+#     stats = get_pokemon_stats(pokemon)
+#     if stats:
+#         pokemon_attack_map[pokemon] = stats['Attack']
+#         pokemon_defense_map[pokemon] = stats['Defense']
+# pokemons_with_types['Attack'] = pokemons_with_types['Name'].map(pokemon_attack_map)
+# pokemons_with_types['Defense'] = pokemons_with_types['Name'].map(pokemon_defense_map)
+print(pokemons_with_types)
 
 # 6. Średni atak i obrona
 # Oblicz średnie wartości attack i defense dla wszystkich Pokémonów z listy.
@@ -118,6 +137,34 @@ top_5_attack = pokemons_with_types.sort_values(by='Attack', ascending=False).hea
 # 8. Pobieranie nazw postaci
 # Pobierz pierwsze 10 postaci ze Star Wars i zapisz ich name, height, mass do Pandas
 # DataFrame.
+
+def fetch_swapi_data():
+    people_info = []
+    for i in range(1, 11):
+        url = f"https://swapi.info/api/people/{1}"
+        response = request.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            return pd.DataFrame(data)
+
+sw_data = fetch_swapi_data()
+print(sw_data)
+def get_people_characteristics(data):
+
+    peoples = data['name']
+    heights = data['height']
+    masses = data['mass']
+
+    people_data = {
+        "Name": peoples,
+        "Height": heights,
+        "Mass": masses
+    }
+    return pd.DataFrame(people_data)
+
+people_characteristics = get_people_characteristics(sw_data)
+print(people_characteristics)
+
 
 # 9. Filtrowanie po wzroście
 # Wyświetl postacie, których wzrost (height) jest większy niż 170 cm.
