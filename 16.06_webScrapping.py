@@ -5,18 +5,10 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
-import mysql.connector as db
-
-conn = db.connect(
-    host="localhost",
-    user="root",
-    password="1234",
-    database="scrap_db"
-)
-cursor = conn.cursor()
-
+import openpyxl
 
 options = Options()
 options.add_argument("--headless")
@@ -59,17 +51,5 @@ for element in elements:
         }
         posts.append(new_post)
 
-        sql = "INSERT INTO NEWS (title,image,link) VALUES (%s,%s,%s)"
-        variables = (title,image,link)
-        cursor.execute(sql, variables)
-
     except Exception as e:
         print("Brak danych")
-
-
-conn.commit()
-
-df = pd.DataFrame(posts)
-df.to_excel('newsy.xlsx', index=False)
-df.to_json("newsy.json")
-print(df)

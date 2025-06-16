@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="156d20d3-eacb-42f6-be65-a8571d677276" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/12.06_python_mysql.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12.06_plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/16.06_webScrapping.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12.06_python_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/12.06_python_mysql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,7 @@
     "Python.03.06 API.executor": "Run",
     "Python.0306_API_Cwiczenia.executor": "Run",
     "Python.12.06_python_mysql.executor": "Run",
+    "Python.16.06_webScrapping.executor": "Run",
     "Python.20.05 excercises.executor": "Run",
     "Python.24.04 listy_zadania.executor": "Run",
     "Python.24.05 excercises.executor": "Run",
